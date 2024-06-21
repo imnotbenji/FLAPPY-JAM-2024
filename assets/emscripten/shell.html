@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>game</title>
+</head>
+
+<body
+    style="margin: 0px; height: 100vh; display: flex; align-items: center; justify-content: center; background: black;">
+    <canvas id="canvas" aria-label="game" tabindex="1"
+        style="margin: auto auto; outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+        oncontextmenu="event.preventDefault()">
+    </canvas>
+    <script type='text/javascript'>
+        var Module = {
+            canvas: (() => {return document.getElementById('canvas');})()
+        };
+        var refocusCanvas = () => document.getElementById("canvas").focus();
+        document.body.addEventListener('click', refocusCanvas, true);
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            /** TODO: handle mobile unsupported warning */
+        }
+    </script>
+    {{{ SCRIPT }}}
+</body>
+
+</html>
